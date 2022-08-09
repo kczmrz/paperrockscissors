@@ -1,0 +1,157 @@
+.playerAnimation {
+    opacity: 0%;
+    animation: AnimationBeforeChoice 1.9s forwards;
+    z-index: -1;
+}
+
+.AIAnimation {
+    opacity: 0%;
+    animation: AnimationBeforeChoice 1s forwards;
+    z-index: -1;
+    animation-delay: 0.3s;
+}
+
+@keyframes AnimationBeforeChoice {
+    from {
+        transform: rotate(320deg);
+        opacity: 0%;
+        margin-top: 100%;
+        filter: drop-shadow(16px 16px 20px red) invert(100%);
+        width: 30%;
+
+        
+    }
+   
+    10%{
+        filter: drop-shadow(16px 16px 20px rgb(6, 163, 85)) invert(100%);  
+        
+    }
+    to {
+        width: 90%;
+        opacity:100%;
+        z-index: -5;
+        
+    }
+}
+
+/*For Tablet */
+@media (min-width:800px) { 
+    .playerAnimation {
+        opacity: 0%;
+        animation: AnimationBeforeChoice 1.9s forwards;
+        z-index: -1;
+    }
+    
+    .AIAnimation {
+        opacity: 0%;
+        animation: AnimationBeforeChoice 1s forwards;
+        z-index: -1;
+        animation-delay: 0.3s;
+    }
+
+    @keyframes AnimationBeforeChoice {
+        from {
+            transform: rotate(320deg);
+            opacity: 0%;
+            margin-top: 100%;
+            filter: drop-shadow(16px 16px 20px red) invert(100%);
+            width: 30%;
+    
+            
+        }
+       
+        10%{
+            filter: drop-shadow(16px 16px 20px rgb(6, 163, 85)) invert(100%);  
+            
+        }
+        to {
+            
+            width: 68%;
+            opacity:100%;
+            z-index: -5;
+            
+        }
+    }
+}
+
+
+/*For pc */
+@media (min-width:1100px) { 
+    .playerAnimation {
+        opacity: 0%;
+        animation: AnimationBeforeChoice 1.9s forwards;
+        z-index: -1;
+    }
+    
+    .AIAnimation {
+        opacity: 0%;
+        animation: AnimationBeforeChoice 1s forwards;
+        z-index: -1;
+        animation-delay: 0.3s;
+    }
+
+    @keyframes AnimationBeforeChoice {
+        from {
+            transform: rotate(320deg);
+            opacity: 0%;
+            margin-top: 100%;
+            filter: drop-shadow(16px 16px 20px red) invert(100%);
+            width: 30%;
+    
+            
+        }
+       
+        10%{
+            filter: drop-shadow(16px 16px 20px rgb(6, 163, 85)) invert(100%);  
+            
+        }
+        to {
+            margin-top: 5%;
+            width: 60%;
+            opacity:100%;
+            z-index: -5;
+            
+        }
+    }
+}
+
+
+/*For maxscreen */
+@media (min-width:1200px) { 
+    .playerAnimation {
+        opacity: 0%;
+        animation: AnimationBeforeChoice 1.9s forwards;
+        z-index: -1;
+    }
+    
+    .AIAnimation {
+        opacity: 0%;
+        animation: AnimationBeforeChoice 1s forwards;
+        z-index: -1;
+        animation-delay: 0.3s;
+    }
+
+    @keyframes AnimationBeforeChoice {
+        from {
+            transform: rotate(320deg);
+            opacity: 0%;
+            margin-top: 100%;
+            filter: drop-shadow(16px 16px 20px red) invert(100%);
+            width: 30%;
+    
+            
+        }
+       
+        10%{
+            filter: drop-shadow(16px 16px 20px rgb(6, 163, 85)) invert(100%);  
+            
+        }
+        to {
+            margin-top: 5%;
+            width: 75%;
+            opacity:100%;
+            z-index: -5;
+            
+        }
+    }
+}

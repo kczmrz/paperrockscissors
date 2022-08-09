@@ -1,0 +1,37 @@
+.EndImage {
+
+    animation: GrowImage 1s forwards;
+}
+
+
+@keyframes GrowImage {
+    from {
+        width: 5%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*For pc */
+@media (min-width:1100px) { 
+    .EndImage {
+
+        animation: GrowImage 1s forwards;
+    }
+    
+    
+    @keyframes GrowImage {
+        from {
+            width: 5%;
+        }
+        to {
+            width: 40%;
+        }
+    }
+    
+}
