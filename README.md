@@ -14,6 +14,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `How to install and run:`
+1) git clone [copy github link of this project)
+2) npm install 
+3) npm start
+
+
 ### `About the project`
 
 🇬🇧 It's simple game: "Paper, Rock, Scissors". Technologies: React, Typescript, Tailwindcss \
