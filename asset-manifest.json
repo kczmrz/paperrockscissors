@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/paperrockscissors/static/css/main.50c92d87.css",
-    "main.js": "/paperrockscissors/static/js/main.9df3abc0.js",
+    "main.js": "/paperrockscissors/static/js/main.568123de.js",
     "static/js/787.9604c1bd.chunk.js": "/paperrockscissors/static/js/787.9604c1bd.chunk.js",
     "static/media/bg.jpg": "/paperrockscissors/static/media/bg.52a07b395912e61bc3fa.jpg",
     "static/media/lose.png": "/paperrockscissors/static/media/lose.5bcfc6eb0aa6c7bd109b.png",
@@ -12,11 +12,11 @@
     "static/media/rock.png": "/paperrockscissors/static/media/rock.3b50d0c6fe005bdbdf04.png",
     "index.html": "/paperrockscissors/index.html",
     "main.50c92d87.css.map": "/paperrockscissors/static/css/main.50c92d87.css.map",
-    "main.9df3abc0.js.map": "/paperrockscissors/static/js/main.9df3abc0.js.map",
+    "main.568123de.js.map": "/paperrockscissors/static/js/main.568123de.js.map",
     "787.9604c1bd.chunk.js.map": "/paperrockscissors/static/js/787.9604c1bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.50c92d87.css",
-    "static/js/main.9df3abc0.js"
+    "static/js/main.568123de.js"
   ]
 }
