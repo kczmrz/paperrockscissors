@@ -4,7 +4,7 @@ import { GameNavbar, ScoreBoard, AiChoice, PlayerPanel, AnimationDiv, EndGame, P
 import { PointsInfo, DisplayScoreBoardAnimation }  from "../../DataTypes/Props";
 import { AI_Random_Item, decryptId, encryptId, ReturnWinner } from "../../Algorythms/algo1";
 import { WhoWin } from "../../Algorythms/MainMechanics";
-
+import { useNavigate } from "react-router";
 function Game()
 {
     const { id } = useParams();
@@ -12,10 +12,11 @@ function Game()
     
     const playerName:string = decryptId(name);
     const Rounds:number = parseInt(decryptId(id));
+    const navigate = useNavigate();
     useEffect(()=>{
      if(playerName == null)
      {
-         window.location.href = '/';
+         navigate('/');
      }
      
     }, [])
@@ -30,14 +31,9 @@ function Game()
     const [LastAiChoice, setLastAiChoice] = useState<number>(20);
     const [PlayResultBool, setPlayResultBool] = useState<boolean>(true);
     const SelectItem = (itemName: string)=> {
-        
-
         setPlayerChoice(itemName);
         
         setAISelection(AI_Random_Item(LastAiChoice));
-       
-          
-        
     }
 
 
@@ -85,35 +81,22 @@ function Game()
         
    
     }
-    
-    
-
-
-    
-    
-
-   
-   if(PlayResultBool){
-    return(
-    <div className="w-full desktop:w-6/12 desktop:border-4 desktop:border-white desktop:shadow-xl">
-       
-    <GameNavbar round={Round} key={Round}/>
-    <GameRounds roundsnumber={Rounds}/>
-    <ScoreBoard key={Round+1} AI={Points.AI} Player={Points.Player} pointsAnim1={PointsAnimation.AiAnim} pointsAnim2={PointsAnimation.PlayerAnim}/>
-    <AiChoice key={Round+2} AiItemNmbr={AISelection}/>
-    <AnimationDiv playerChoice={PlayerChoice} AiChoice={AISelection}/>
-    <PlayerPanel nxtRound={NextRound} UserChoice={PlayerChoice} paper={()=> SelectItem('paper')} rock={()=> SelectItem('rock')} scissors={()=> SelectItem('scissors') }/>
-    
-    </div>
+    if(PlayResultBool){
+       return(
+        <div className="w-full desktop:w-6/12 desktop:border-4 desktop:border-white desktop:shadow-xl">
+          <GameNavbar round={Round} key={Round}/>
+          <GameRounds roundsnumber={Rounds}/>
+          <ScoreBoard key={Round+1} AI={Points.AI} Player={Points.Player} pointsAnim1={PointsAnimation.AiAnim} pointsAnim2={PointsAnimation.PlayerAnim}/>
+          <AiChoice key={Round+2} AiItemNmbr={AISelection}/>
+          <AnimationDiv playerChoice={PlayerChoice} AiChoice={AISelection}/>
+          <PlayerPanel nxtRound={NextRound} UserChoice={PlayerChoice} paper={()=> SelectItem('paper')} rock={()=> SelectItem('rock')} scissors={()=> SelectItem('scissors') }/>
+        </div>
     )}
     else {
         return (
         <div className="w-full desktop:w-6/12 desktop:border-4 desktop:border-white desktop:shadow-xl">
-        
-        <EndGame key={Round} winner={ReturnWinner(Points.AI, Points.Player)}/>
-
-        <PlayAgainPanel/>
-        
+           <EndGame key={Round} winner={ReturnWinner(Points.AI, Points.Player)}/>
+           <PlayAgainPanel/>
         </div> 
         )
     }
@@ -123,6 +106,3 @@ function Game()
 export default Game;
 
 
-
-/*     <button className="bg-black text-white text-4xl" onClick={()=>  ChangeRound(Round+1)}>Dev Change Round</button>
- */

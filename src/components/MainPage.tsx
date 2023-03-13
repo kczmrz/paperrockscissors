@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { encryptId } from "./Algorythms/algo1";
 import Navbar from './Navbar';
+import { useNavigate } from "react-router";
 type AlertProps = {
 
     visible: boolean
@@ -11,6 +12,7 @@ function MainPage() {
      const [inputValue, SetInputValue] = useState<string>("");
      const [roundsChoose, setroundsChoose] = useState<number>();
      
+     const navigate = useNavigate();
      const ShowChoice = ()=> {
       if(roundsChoose == null)
       {
@@ -35,7 +37,7 @@ function MainPage() {
      const CheckuserName = ()=>{
         if(inputValue.length >= 3 && roundsChoose != null)
         {
-          window.location.href = `/game/${encryptId(roundsChoose.toString())}/${encryptId(inputValue)}`;
+          navigate(`/game/${encryptId(roundsChoose.toString())}/${encryptId(inputValue)}`);
          /*Zastosowałem tutaj system szyfrowania danych, aby nie można było sobie sterować tą grą z linku */
          }
         else {
