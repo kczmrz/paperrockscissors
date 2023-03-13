@@ -6,7 +6,7 @@ export default function PlayAgainPanel()
 {
 
     const PlayAgain = ()=> {
-        window.location.href = '/';
+        window.location.href = '/paperrockscissors';
     }
     return(<>
         <div className="w-full h-52 bg-violet-900 shadow-xl border-t-4 z-10 border-yellow-400 fixed bottom-0 desktop:static ">
