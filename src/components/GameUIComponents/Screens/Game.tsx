@@ -1,16 +1,9 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
-import GameNavbar from "../GameScreenComponents/GameNavbar";
-import ScoreBoard from "../GameScreenComponents/ScoreBoard";
-import AiChoice from "../GameScreenComponents/AIChoicePanel";
-import PlayerPanel from "../GameScreenComponents/PlayerPanel";
-import GameRounds from "../GameScreenComponents/Rounds";
+import { GameNavbar, ScoreBoard, AiChoice, PlayerPanel, AnimationDiv, EndGame, PlayAgainPanel, GameRounds } from "../GameScreenComponents/";
 import { PointsInfo, DisplayScoreBoardAnimation }  from "../../DataTypes/Props";
 import { AI_Random_Item, decryptId, encryptId, ReturnWinner } from "../../Algorythms/algo1";
 import { WhoWin } from "../../Algorythms/MainMechanics";
-import AnimationDiv from "../GameScreenComponents/animations";
-import EndGame from "./EndGame";
-import PlayAgainPanel from "../GameScreenComponents/PlayAgain";
 
 function Game()
 {
@@ -67,10 +60,7 @@ function Game()
             setLastAiChoice(AISelection);
             setAISelection(777);
             setPlayResultBool(!PlayResultBool);
-          
-            
-                      
-        }
+          }
         
     }
     
